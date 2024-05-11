@@ -1,5 +1,5 @@
 /*
-  1. Use a more-intuitive box-sizing model.
+1. Use a more-intuitive box-sizing model.
 */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -20,8 +20,8 @@
     Typographic tweaks!
     3. Add accessible line-height
     4. Improve text rendering
-  */
-  body {
+    */
+    body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
@@ -40,23 +40,23 @@
   }
   /*
     7. Avoid text overflows
-  */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+    */
+    p, h1, h2, h3, h4, h5, h6 {
+      overflow-wrap: break-word;
+    }
+    /*
     8. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
-:root{
-  /* Theme 1 */
-  
-  /* #Backgrounds */
-  /* (main background) */
-  --Very-dark-desaturated-blue-bg: hsl(222, 26%, 31%);
-  /* (toggle background, keypad background) */
+    */
+    #root, #__next {
+      isolation: isolate;
+    }
+    :root{
+      /* Theme 1 */
+      
+      /* #Backgrounds */
+      /* (main background) */
+      --Very-dark-desaturated-blue-bg: hsl(222, 26%, 31%);
+      /* (toggle background, keypad background) */
   --Very-dark-desaturated-blue-toggle: hsl(223, 31%, 20%);
   /* (screen background) */
   --Very-dark-desaturated-blue-screen: hsl(224, 36%, 15%);
@@ -117,9 +117,9 @@
   
   /* Backgrounds */
   /* (main background) */
-  --Very-dark-violet: hsl(268, 75%, 9%);
+  --Very-dark-violet-bg: hsl(268, 75%, 9%);
   /* (toggle background, keypad background, screen background) */
-  --Very-dark-violet: hsl(268, 71%, 12%);
+  --Very-dark-violet-toggle: hsl(268, 71%, 12%);
   
   /* Keys */
   /* (key background) */
@@ -155,12 +155,13 @@
   color: hsl(228, 45%, 60%); 
 }
 p{
-    font-size: 16px;
+  font-size: 16px;
 }
 .number{
   font-size: 32px;
 }
-.main{
+/* Theme 1 */
+main{
   min-height: calc(100vh - 69px);
   display: grid;
   place-items: center;
@@ -272,6 +273,24 @@ p{
   border-bottom: 4px solid var(--Dark-red);
   color: var(--White);
 }
+/* Theme 1 */
+/* Theme 2 */
+.theme-2{
+  background: var(--Light-gray);
+}
+.theme-2 .key-cont, .theme-2 .radio-cont{
+  background: var(--Grayish-red);
+}
+.theme-2 .color-key{
+  background: var(--Dark-moderate-cyan);
+  border-bottom: 4px solid var(--Very-dark-cyan);
+}
+/* Theme 2 */
+/* Theme 3 */
+.theme-3{
+  background: var(--Very-dark-violet);
+}
+/* Theme 3 */
 /* Extra large devices (large desktops, 1200px and up) */
 @media (width < 1200px)  {}
 
