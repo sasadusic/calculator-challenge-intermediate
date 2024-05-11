@@ -18,28 +18,42 @@
   <div class="calculator">
     <div class="header">
       <p class="phar calc">calc</p>
-      <div class="theme-cont"></div>
-      <div class="screen"></div>
-      <div class="key-cont">
-        <button class="btn key">7</button>
-        <button class="btn key">8</button>
-        <button class="btn key">9</button>
-        <button class="btn key">DEL</button>
-        <button class="btn key">4</button>
-        <button class="btn key">5</button>
-        <button class="btn key">6</button>
-        <button class="btn key">+</button>
-        <button class="btn key">1</button>
-        <button class="btn key">2</button>
-        <button class="btn key">3</button>
-        <button class="btn key">-</button>
-        <button class="btn key">.</button>
-        <button class="btn key">0</button>
-        <button class="btn key">/</button>
-        <button class="btn key">X</button>
-        <button class="btn key span-2">RESET</button>
-        <button class="btn key span-2">=</button>
+      <div class="theme-cont">
+        <div class="theme-phar">THEME</div>
+        <div class="form-cont">
+          <div class="theme-nums">
+            <p class="num num-1">1</p>
+            <p class="num num-2">2</p>
+            <p class="num num-3">3</p>
+          </div>
+          <form class="radio-cont">
+            <input type="radio" class="radio radio-1" name="theme-choose" value="theme-1" checked>
+            <input type="radio" class="radio radio-2" name="theme-choose" value="theme-2">
+            <input type="radio" class="radio radio-3" name="theme-choose" value="theme-3">
+          </form>
+        </div>
       </div>
+    </div>
+      <input id="screen" class="screen" readonly placeholder="0">
+    <div class="key-cont">
+        <button class="btn key" value="7">7</button>
+        <button class="btn key" value="8">8</button>
+        <button class="btn key" value="9">9</button>
+        <button class="btn del color-key">DEL</button>
+        <button class="btn key" value="4">4</button>
+        <button class="btn key" value="5">5</button>
+        <button class="btn key" value="6">6</button>
+        <button class="btn key" value="+">+</button>
+        <button class="btn key" value="1">1</button>
+        <button class="btn key" value="2">2</button>
+        <button class="btn key" value="3">3</button>
+        <button class="btn key" value="-">-</button>
+        <button class="btn key" value=".">.</button>
+        <button class="btn key" value="0">0</button>
+        <button class="btn key" value="/">/</button>
+        <button class="btn key" value="*">X</button>
+        <button class="btn reset span-2 color-key">RESET</button>
+        <button class="btn span-2 equal">=</button>
     </div>
   </div>
 </main>

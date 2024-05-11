@@ -14,6 +14,7 @@
     transition: .3s;
     font-weight: 700;
     font-family: "League Spartan", sans-serif;
+    /* color: var(--Very-dark-grayish-blue); */
   }
   /*
     Typographic tweaks!
@@ -62,9 +63,9 @@
   
   /* #Keys */
   /* (key background) */
-  --Desaturated-dark-blue: hsl(225, 21%, 49%);
+  --Desaturated-dark-blue-key: hsl(225, 21%, 49%);
   /* (key shadow) */
-  --Desaturated-dark-blue: hsl(224, 28%, 35%);
+  --Desaturated-dark-blue-shadow: hsl(224, 28%, 35%);
   
   /* (key background, toggle) */
   --Red: hsl(6, 63%, 50%);
@@ -165,8 +166,64 @@ p{
   place-items: center;
   background: var(--Very-dark-desaturated-blue-bg);
 }
+.header{
+  color: var(--White);
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.calc{
+  font-size: 24px;
+}
+.theme-cont{
+  display: flex;
+  align-items: end;
+  gap: 12px;
+}
+.theme-phar{
+  font-size: 12px;
+  font-weight: 400;
+}
+.theme-nums{
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  margin-left: 6px;
+}
+.num{
+  font-size: 12px;
+}
+.radio-cont{
+  padding: 4px;
+  background: var(--Very-dark-desaturated-blue-toggle);
+  border-radius: 50px;
+  height: max-content;
+  display: flex;
+  gap: 6px;
+}
+.radio{
+  /* Sakrije sam input element */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Postavi dimenzije i poziciju */
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  /* Postavi izgled */
+  /* border: 2px solid #999; */
+  border-radius: 50%;
+  /* background-color: #fff; */
+}
+.radio:checked{
+  background-color: var(--Red);
+  /* box-shadow: 0 0 0 3px orange; */
+}
 .calculator{
-
+  padding: 60px 0;
 }
 .key-cont{
   display: grid;
@@ -179,13 +236,41 @@ p{
 .span-2{
   grid-column: span 2;
 }
-.key{
-  padding: 6px 16px;
+.btn{
+  padding: 6px 18px;
   font-size: 24px;
   border: none;
   outline-color: transparent;
   border-radius: 6px;
+  background: var(--Light-grayish-orange);
   border-bottom: 4px solid var(--Grayish-orange);
+  color: var(--Very-dark-grayish-blue);
+  cursor: pointer;
+}
+.btn:hover{
+  filter: brightness(1.4);
+}
+.screen{
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 32px;
+  text-align: right;
+  padding: 16px;
+  background: var(--Very-dark-desaturated-blue-screen);
+  border-radius: 6px;
+  margin-bottom: 12px;
+  color: var(--White);
+}
+.color-key{
+  background: var(--Desaturated-dark-blue-key);
+  border-bottom: 4px solid var(--Desaturated-dark-blue-shadow);
+  color: var(--White);
+}
+.equal{
+  background: var(--Red);
+  border-bottom: 4px solid var(--Dark-red);
+  color: var(--White);
 }
 /* Extra large devices (large desktops, 1200px and up) */
 @media (width < 1200px)  {}
@@ -197,4 +282,8 @@ p{
 @media (width < 768px) {}
 
 /* Small devices (landscape phones, 576px and up) */
-@media (width < 576px) {}
+@media (width < 576px) {
+  .calculator{
+    padding: 24px;
+  }
+}
