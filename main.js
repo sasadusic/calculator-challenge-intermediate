@@ -54,6 +54,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Ako je tema sačuvana, primeni je na stranicu
     if (savedTheme) {
         main.classList = savedTheme
+        radios.forEach(radio => {
+            if(radio.value === savedTheme){
+                radio.checked = true
+            }
+        })
     }
 })
 radios.forEach(radio => {   
