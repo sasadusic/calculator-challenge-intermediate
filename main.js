@@ -8,12 +8,23 @@ const main = document.querySelector('main')
 
 keys.forEach(key => {
     key.addEventListener('click', () => {
-        screen.value += key.value
+        if(screen.value === 'Error') {
+            screen.value = key.value
+        }
+        else{
+            screen.value += key.value
+        }
+        
     })
 })
 
 del.onclick = () => {
-    screen.value = screen.value.slice(0, -1)
+    if(screen.value === 'Error') {
+        screen.value = ''
+    }
+    else{
+        screen.value = screen.value.slice(0, -1)
+    }
 }
 
 reset.onclick = () => {
@@ -21,7 +32,12 @@ reset.onclick = () => {
 }
 
 equal.onclick = () => {
-    screen.value = eval(screen.value)
+    try{
+        screen.value = eval(screen.value)
+    }
+    catch(error){
+        screen.value = 'Error'
+    }
 }
 
 radios.forEach(radio => {   
