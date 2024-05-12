@@ -32,11 +32,19 @@ reset.onclick = () => {
 }
 
 equal.onclick = () => {
-    try{
-        screen.value = eval(screen.value)
-    }
-    catch(error){
+    if(screen.value === 'Error') {
         screen.value = 'Error'
+    }
+    else if(screen.value === ''){
+        screen.value = ''
+    }
+    else{
+        try{
+            screen.value = eval(screen.value)
+        }
+        catch(error){
+            screen.value = 'Error'
+        }
     }
 }
 
