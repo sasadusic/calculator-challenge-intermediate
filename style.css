@@ -275,20 +275,75 @@ main{
 }
 /* Theme 1 */
 /* Theme 2 */
+.theme-2 .phar,
+.theme-2 .theme-phar,
+.theme-2 .num,
+.theme-2 .screen{
+  color: var(--Very-dark-grayish-yellow);
+}
 .theme-2{
   background: var(--Light-gray);
 }
 .theme-2 .key-cont, .theme-2 .radio-cont{
   background: var(--Grayish-red);
 }
+.theme-2 .screen{
+  background: var(--Very-light-gray);
+}
+.theme-2 .btn{
+  background: var(--Light-grayish-yellow);
+  border-bottom: 4px solid var(--Dark-grayish-orange);
+  color: var(--Very-dark-grayish-yellow);
+}
 .theme-2 .color-key{
   background: var(--Dark-moderate-cyan);
   border-bottom: 4px solid var(--Very-dark-cyan);
+  color: var(--White);
+}
+.theme-2 .equal{
+  background: var(--Orange);
+  border-bottom: 4px solid var(--Dark-orange);
+  color: var(--White);
+}
+.theme-3 .radio:checked{
+  background-color: var(--Orange);
+  /* box-shadow: 0 0 0 3px orange; */
 }
 /* Theme 2 */
 /* Theme 3 */
 .theme-3{
+  background: var(--Very-dark-violet-bg);
+}
+.theme-3 .phar,
+.theme-3 .theme-phar,
+.theme-3 .num,
+.theme-3 .screen{
+  color: var(--Light-yellow);
+}
+.theme-3 .key-cont, .theme-3 .radio-cont{
+  background: var(--Very-dark-violet-toggle);
+}
+.theme-3 .screen{
+  background: var(--Very-dark-violet-toggle);
+}
+.theme-3 .btn{
   background: var(--Very-dark-violet);
+  border-bottom: 4px solid var(--Dark-magenta);
+  color: var(--Light-yellow);
+}
+.theme-3 .color-key{
+  background: var(--Dark-violet);
+  border-bottom: 4px solid var(--Vivid-magenta);
+  color: var(--White);
+}
+.theme-3 .equal{
+  background: var(--Pure-cyan);
+  border-bottom: 4px solid var(--Soft-cyan);
+  color: var(--Very-dark-blue);
+}
+.theme-3 .radio:checked{
+  background-color: var(--Pure-cyan);
+  /* box-shadow: 0 0 0 3px orange; */
 }
 /* Theme 3 */
 /* Extra large devices (large desktops, 1200px and up) */
