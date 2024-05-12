@@ -47,10 +47,24 @@ equal.onclick = () => {
         }
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+    // Proveri da li je tema sačuvana u Local Storage
+    const savedTheme = localStorage.getItem("theme");
 
+    // Ako je tema sačuvana, primeni je na stranicu
+    if (savedTheme) {
+        main.classList = savedTheme
+    }
+})
 radios.forEach(radio => {   
     radio.addEventListener('click', () => {
+
+    const savedTheme = localStorage.getItem("theme")
+
+    if (savedTheme !== radio.value) {
+        localStorage.setItem("theme", radio.value);
         const theme = radio.value
         main.classList = theme
+    }
     })
 })
